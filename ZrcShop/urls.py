@@ -26,6 +26,8 @@ from ZrcShop.settings import MEDIA_ROOT
 from goods.views import GoodsListViewSet, CategoryViewset
 from users.views import UserViewSet
 
+from zrctest.views import get_news_list,vue_login
+
 
 router = DefaultRouter()
 
@@ -54,4 +56,8 @@ urlpatterns = [
     re_path(r'^login/', obtain_jwt_token),
 
     path(r'docs/', include_docs_urls(title="慕学生鲜")),
+
+    # 测试 VUE临时代码  vue-test 项目使用
+    re_path(r'^get_news_list/', get_news_list),
+    re_path(r'^vue_login/', vue_login),
 ]
