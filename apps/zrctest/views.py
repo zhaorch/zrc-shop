@@ -11,15 +11,15 @@ def get_news_list(request):
         return Response({"message": "Got some data!", "data": request.data})
     return Response({'newsList': [{
                             'title': '恭贺ZRC喜得千金',
-                            'url': '/detail/analysis'
+                            'url': 'detail/analysis'
                             },
                             {
                             'title': '某专家称美国即将爆炸*3',
-                            'url': '/detail/analysis'
+                            'url': 'detail/analysis'
                             },
                             {
                             'title': '中国股市再破新高',
-                            'url': '/detail/analysis'
+                            'url': 'detail/analysis'
                             }]})
 
 
